@@ -38,8 +38,8 @@ for s in stationnames:
     except IndexError:
         warnings.warn('station ' + s + ' is not in the list of eva numbers. \n \
 Check that it is spelled correctly and is a station in Germany. \n \
-If an Umlaut is showing up wrong in this error message, try ensuring that stationsofinterest.json is encoded in ANSI. \n \
 For further debugging, you can find the existing names in evas')
         continue
     fchg_url_current = fchg_url + str(eva)
     fchg[s] = requests.get(fchg_url_current, headers=headers)
+
